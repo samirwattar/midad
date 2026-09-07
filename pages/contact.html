@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا — ميداد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark"><i data-icon="quill"></i></span>
+      ميداد<small>MIDAD · روايات</small>
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html"><i data-icon="home"></i>الرئيسية</a>
+      <a href="../novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+      <a href="../index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+      <div class="nav-drop">
+        <button type="button"><i data-icon="users"></i>مجتمعنا <i data-icon="chevronDown"></i></button>
+        <div class="nav-drop-panel">
+          <a href="#">سيرفر ديسكورد</a>
+          <a href="faq.html">الأسئلة الشائعة</a>
+          <a href="contact.html">تواصل معنا</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="../publish.html" class="btn btn-primary" id="nav-publish-btn">انشر روايتك</a>
+      <button class="icon-btn" aria-label="بحث"><i data-icon="search"></i></button>
+      <button class="icon-btn" aria-label="الإشعارات"><i data-icon="bell"></i></button>
+      <button class="icon-btn" data-theme-toggle aria-label="تبديل المظهر"><i data-icon="moon"></i></button>
+      <span id="nav-auth-area"></span>
+      <button class="icon-btn menu-toggle" data-menu-open aria-label="فتح القائمة"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <div class="mobile-drawer-head">
+      <span class="logo" style="font-size:1.3rem">ميداد</span>
+      <button class="icon-btn" data-menu-close aria-label="إغلاق القائمة"><i data-icon="close"></i></button>
+    </div>
+    <a href="../index.html"><i data-icon="home"></i>الرئيسية</a>
+    <a href="../novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+    <a href="../index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    <a href="contact.html" class="active"><i data-icon="users"></i>تواصل معنا</a>
+    <div class="mobile-drawer-divider"></div>
+    <a href="../publish.html" id="nav-publish-btn-mobile"><i data-icon="quill"></i>انشر روايتك</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">الرئيسية</a>
+        <i data-icon="chevronLeft"></i>
+        <span>تواصل معنا</span>
+      </div>
+      <h1 class="serif" style="font-size:2.2rem;margin-bottom:8px">تواصل معنا</h1>
+      <p style="color:var(--paper-mute);max-width:60ch">نحب أن نسمع منك — استفسار، اقتراح، مشكلة تقنية، أو طلب ترقية حسابك إلى كاتب. اختر ما يناسبك أدناه.</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container contact-layout">
+
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i data-icon="mail"></i></div>
+          <div>
+            <h3>البريد الإلكتروني</h3>
+            <p>لأي استفسار عام أو طلب دعم<br><a href="mailto:support@midad.example">support@midad.example</a></p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i data-icon="discord"></i></div>
+          <div>
+            <h3>مجتمع ديسكورد</h3>
+            <p>للنقاش المباشر مع القرّاء والكتّاب والفريق<br><a href="#">انضم للسيرفر</a></p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i data-icon="clock"></i></div>
+          <div>
+            <h3>وقت الاستجابة</h3>
+            <p>نرد على معظم الرسائل خلال 24 إلى 48 ساعة عمل.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="contact-success" id="contact-success">
+          <i data-icon="check"></i>
+          <span>تم إرسال رسالتك بنجاح. سنعاود التواصل معك قريبًا، شكرًا لك.</span>
+        </div>
+
+        <form id="contact-form">
+          <div class="two-col">
+            <div class="form-row">
+              <label for="c-name">الاسم</label>
+              <input type="text" id="c-name" placeholder="اسمك" required>
+            </div>
+            <div class="form-row">
+              <label for="c-email">البريد الإلكتروني</label>
+              <input type="email" id="c-email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="c-subject">الموضوع</label>
+            <select id="c-subject">
+              <option value="دعم فني">دعم فني</option>
+              <option value="النشر وترقية الحساب">النشر وترقية الحساب إلى كاتب</option>
+              <option value="شراكات وإعلانات">شراكات وإعلانات</option>
+              <option value="أخرى">أخرى</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="c-message">الرسالة</label>
+            <textarea id="c-message" style="min-height:150px" placeholder="اكتب رسالتك هنا..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="contact-submit">
+            <i data-icon="quill"></i> إرسال الرسالة
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i data-icon="quill"></i></span>ميداد</a>
+      <p>منصّة عربية للروايات الأصلية والمترجمة، نصنعها لتكون بيتًا للكتّاب المستقلين وقرّائهم.</p>
+      <div class="footer-social">
+        <a href="#" class="icon-btn" aria-label="ديسكورد"><i data-icon="discord"></i></a>
+        <a href="#" class="icon-btn" aria-label="مشاركة"><i data-icon="share"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>المنصّة</h4>
+      <ul>
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../novels.html">قائمة الروايات</a></li>
+        <li><a href="../publish.html">انشر روايتك</a></li>
+        <li><a href="../index.html#trending">الأكثر رواجًا</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>الدعم</h4>
+      <ul>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="#" data-report-issue>الإبلاغ عن مشكلة</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>قانوني</h4>
+      <ul>
+        <li><a href="terms.html">الشروط والأحكام</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="copyright.html">حقوق النشر</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> ميداد. جميع الحقوق محفوظة.</span>
+    <span>صُنع بحب للقصص العربية</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <span class="toast-ico"><i data-icon="check"></i></span>
+  <div><strong>تم</strong><span>—</span></div>
+</div>
+
+<script src="../script.js"></script>
+<script>
+  // Contact form — reuses the existing /api/reports endpoint (type: "other")
+  // rather than needing a dedicated backend route just for this page.
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    // prefill the name field once we know who's logged in, if anyone
+    setTimeout(() => {
+      if (typeof currentUser !== 'undefined' && currentUser) {
+        const nameField = document.getElementById('c-name');
+        if (nameField && !nameField.value) nameField.value = currentUser.username;
+      }
+    }, 500);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('c-name').value.trim();
+      const email = document.getElementById('c-email').value.trim();
+      const subject = document.getElementById('c-subject').value;
+      const message = document.getElementById('c-message').value.trim();
+      if (!name || !email || !message) return;
+
+      const submitBtn = document.getElementById('contact-submit');
+      const originalHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'جارٍ الإرسال...';
+
+      try {
+        const res = await fetch('/api/reports', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({
+            type: 'other',
+            message: `[تواصل معنا — ${subject}]\nالاسم: ${name}\n\n${message}`,
+            email,
+            page_url: window.location.href
+          })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data.error || 'فشل إرسال الرسالة');
+
+        form.reset();
+        const successBox = document.getElementById('contact-success');
+        successBox.style.display = 'flex';
+        if (typeof showToast === 'function') showToast('تم الإرسال', 'سنعاود التواصل معك قريبًا.');
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (err) {
+        alert(err.message || 'حدث خطأ أثناء الإرسال.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHtml;
+        if (typeof renderIcons === 'function') renderIcons(submitBtn);
+      }
+    });
+  });
+</script>
+</body>
+</html>

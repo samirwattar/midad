@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تعديل الرواية — ميداد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">
+      <span class="logo-mark"><i data-icon="quill"></i></span>
+      ميداد<small>MIDAD · روايات</small>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+      <a href="novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+      <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="publish.html" class="btn btn-primary" id="nav-publish-btn">انشر روايتك</a>
+      <button class="icon-btn" aria-label="بحث"><i data-icon="search"></i></button>
+      <button class="icon-btn" aria-label="الإشعارات"><i data-icon="bell"></i></button>
+      <button class="icon-btn" data-theme-toggle aria-label="تبديل المظهر"><i data-icon="moon"></i></button>
+      <span id="nav-auth-area"></span>
+      <button class="icon-btn menu-toggle" data-menu-open aria-label="فتح القائمة"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <div class="mobile-drawer-head">
+      <span class="logo" style="font-size:1.3rem">ميداد</span>
+      <button class="icon-btn" data-menu-close aria-label="إغلاق القائمة"><i data-icon="close"></i></button>
+    </div>
+    <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+    <a href="novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+    <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    <div class="mobile-drawer-divider"></div>
+    <a href="publish.html" id="nav-publish-btn-mobile"><i data-icon="quill"></i>انشر روايتك</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i data-icon="chevronLeft"></i>
+        <a href="profile.html">الملف الشخصي</a>
+        <i data-icon="chevronLeft"></i>
+        <span>تعديل الرواية</span>
+      </div>
+      <h1 class="serif" style="font-size:2.2rem;margin-bottom:8px">تعديل الرواية</h1>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div id="edit-guard" style="display:none;text-align:center;padding:60px 0">
+        <p style="color:var(--paper-mute);margin-bottom:16px">—</p>
+        <a href="profile.html" class="btn btn-primary">العودة للملف الشخصي</a>
+      </div>
+
+      <form class="publish-layout" id="edit-form">
+        <div class="form-card">
+          <div class="form-row">
+            <label for="e-title">عنوان الرواية</label>
+            <input type="text" id="e-title" required>
+          </div>
+
+          <div class="form-row">
+            <label for="e-title-en">العنوان بالإنجليزية (اختياري)</label>
+            <input type="text" id="e-title-en">
+          </div>
+
+          <div class="form-row">
+            <label>التصنيفات <span style="color:var(--paper-mute);font-weight:500">(اختر حتى 3)</span></label>
+            <div class="chip-select">
+              <button type="button">خيال</button>
+              <button type="button">رومانسي</button>
+              <button type="button">أكشن</button>
+              <button type="button">دراما</button>
+              <button type="button">كوميدي</button>
+              <button type="button">إثارة</button>
+              <button type="button">خيال علمي</button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>حالة العمل</label>
+            <div class="status-choice">
+              <label><input type="radio" name="status" value="ongoing"> مستمر</label>
+              <label><input type="radio" name="status" value="completed"> مكتمل</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>نوع العمل</label>
+            <div class="status-choice">
+              <label><input type="radio" name="type" value="translated"> مترجمة</label>
+              <label><input type="radio" name="type" value="original"> مؤلفة</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="e-synopsis">نبذة عن الرواية</label>
+            <textarea id="e-synopsis" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label>غلاف الرواية</label>
+            <div class="dropzone" id="cover-dropzone">
+              <i data-icon="upload"></i>
+              <b>اسحب صورة الغلاف هنا أو اضغط للاختيار</b>
+              <span>PNG أو JPG — بحجم لا يتجاوز 5 ميغابايت</span>
+              <input type="file" accept="image/*">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <i data-icon="check"></i> حفظ التغييرات
+          </button>
+        </div>
+
+        <aside class="tips-card">
+          <h3><i data-icon="bulb"></i> إدارة الرواية</h3>
+          <a href="#" id="edit-manage-chapters-link" class="btn btn-outline btn-block" style="margin-bottom:16px">
+            <i data-icon="book"></i> إدارة الفصول
+          </a>
+          <p style="color:var(--paper-mute);font-size:.85rem;line-height:1.8;margin-bottom:16px">
+            حذف الرواية سيحذف أيضًا كل فصولها وتصنيفاتها. لا يمكن التراجع عن هذا الإجراء.
+          </p>
+          <button type="button" class="btn btn-outline btn-block btn-danger-text" id="edit-delete-btn">
+            <i data-icon="close"></i> حذف الرواية
+          </button>
+        </aside>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast">
+  <span class="toast-ico"><i data-icon="check"></i></span>
+  <div><strong>تم</strong><span>—</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

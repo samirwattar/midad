@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول — ميداد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">
+      <span class="logo-mark"><i data-icon="quill"></i></span>
+      ميداد<small>MIDAD · روايات</small>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+      <a href="novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="auth-shell">
+    <div class="container">
+      <div class="auth-split">
+
+        <div class="auth-brand">
+          <a class="logo" href="index.html">
+            <span class="logo-mark"><i data-icon="quill"></i></span>
+            ميداد
+          </a>
+
+          <p class="auth-brand-quote">"في كل قصة باب... وفي ميداد آلاف الأبواب تنتظر أن تُفتح."</p>
+
+          <div class="auth-brand-features">
+            <div class="auth-brand-feature">
+              <span class="ico"><i data-icon="book"></i></span>
+              آلاف الروايات العربية الأصلية والمترجمة
+            </div>
+            <div class="auth-brand-feature">
+              <span class="ico"><i data-icon="heart"></i></span>
+              احفظ رواياتك المفضّلة وتابع فصولها الجديدة
+            </div>
+            <div class="auth-brand-feature">
+              <span class="ico"><i data-icon="quill"></i></span>
+              انشر أعمالك ووصّل صوتك لآلاف القرّاء
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-panel">
+          <div class="form-card auth-card">
+            <h1 class="serif">تسجيل الدخول</h1>
+            <p class="auth-sub">أهلًا بعودتك، سجّل الدخول لمتابعة قراءاتك.</p>
+
+            <div class="form-alert" id="login-alert" role="alert"></div>
+
+            <form id="login-form" novalidate>
+              <div class="form-row" id="row-username">
+                <label for="l-username">اسم المستخدم أو البريد الإلكتروني</label>
+                <input type="text" id="l-username" autocomplete="username">
+                <div class="field-error" id="err-username"></div>
+              </div>
+
+              <div class="form-row" id="row-password">
+                <label for="l-password">كلمة المرور</label>
+                <div class="password-field">
+                  <input type="password" id="l-password" autocomplete="current-password">
+                  <button type="button" class="password-toggle" data-toggle-for="l-password" aria-label="إظهار كلمة المرور">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                </div>
+                <div class="field-error" id="err-password"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="login-submit">دخول</button>
+            </form>
+
+            <p class="auth-switch">ليس لديك حساب؟ <a href="register.html">أنشئ حسابًا</a></p>
+            <p class="auth-switch">هل نسيت كلمة السر؟<a href="reset-password.html">تغيير كلمة السر</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

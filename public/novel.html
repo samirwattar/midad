@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رواية — ميداد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">
+      <span class="logo-mark"><i data-icon="quill"></i></span>
+      ميداد<small>MIDAD · روايات</small>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+      <a href="novels.html" class="active"><i data-icon="book"></i>قائمة الروايات</a>
+      <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+      <div class="nav-drop">
+        <button type="button"><i data-icon="users"></i>مجتمعنا <i data-icon="chevronDown"></i></button>
+        <div class="nav-drop-panel">
+          <a href="#">سيرفر ديسكورد</a>
+          <a href="/pages/faq.html">الأسئلة الشائعة</a>
+          <a href="/pages/contact.html">تواصل معنا</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="publish.html" class="btn btn-primary" id="nav-publish-btn">انشر روايتك</a>
+      <button class="icon-btn" aria-label="بحث"><i data-icon="search"></i></button>
+      <button class="icon-btn" aria-label="الإشعارات"><i data-icon="bell"></i></button>
+      <button class="icon-btn" data-theme-toggle aria-label="تبديل المظهر"><i data-icon="moon"></i></button>
+      <span id="nav-auth-area"></span>
+      <button class="icon-btn menu-toggle" data-menu-open aria-label="فتح القائمة"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <div class="mobile-drawer-head">
+      <span class="logo" style="font-size:1.3rem">ميداد</span>
+      <button class="icon-btn" data-menu-close aria-label="إغلاق القائمة"><i data-icon="close"></i></button>
+    </div>
+    <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+    <a href="novels.html" class="active"><i data-icon="book"></i>قائمة الروايات</a>
+    <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    <a href="#"><i data-icon="users"></i>مجتمعنا</a>
+    <div class="mobile-drawer-divider"></div>
+    <a href="publish.html" id="nav-publish-btn-mobile"><i data-icon="quill"></i>انشر روايتك</a>
+  </div>
+</div>
+
+<main id="novel-root">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i data-icon="chevronLeft"></i>
+        <a href="novels.html">الروايات</a>
+        <i data-icon="chevronLeft"></i>
+        <span id="nv-crumb-title">—</span>
+      </div>
+
+      <div class="novel-head">
+        <div class="novel-cover-lg" id="nv-cover"></div>
+        <div class="novel-info">
+          <span class="badge badge-rose" id="nv-badge" style="margin-bottom:12px">رواية</span>
+          <h1 id="nv-title">—</h1>
+          <div class="eng-title" id="nv-eng">—</div>
+          <div class="novel-author">
+            <i data-icon="quill"></i>
+            بقلم <b id="nv-author">—</b>
+          </div>
+          <div class="novel-tags" id="nv-tags"></div>
+          <div class="novel-stats">
+            <div class="novel-stat"><b id="nv-stat-chapters">—</b><span>فصل</span></div>
+            <div class="novel-stat"><b id="nv-stat-views">—</b><span>مشاهدة</span></div>
+            <div class="novel-stat"><b id="nv-stat-followers">—</b><span>متابع</span></div>
+            <div class="novel-stat rating"><b id="nv-stat-rating">—</b><span>التقييم</span></div>
+            <div class="novel-stat"><b id="nv-status-pill">—</b><span>الحالة</span></div>
+          </div>
+          <div class="novel-actions">
+            <a href="#chapters" class="btn btn-primary"><i data-icon="book"></i> ابدأ القراءة</a>
+            <button type="button" class="btn btn-outline" id="nv-library-btn"><i data-icon="heart"></i> أضف للمكتبة</button>
+            <button type="button" class="btn btn-ghost" id="nv-follow-btn"><i data-icon="bell"></i> تابع الكاتب</button>
+          </div>
+          <div class="rating-widget" id="nv-rating-widget">
+            <span class="rating-widget-label">قيّم هذه الرواية</span>
+            <div class="rating-stars" id="nv-rating-stars">
+              <button type="button" class="star-btn" data-value="1"><i data-icon="star"></i></button>
+              <button type="button" class="star-btn" data-value="2"><i data-icon="star"></i></button>
+              <button type="button" class="star-btn" data-value="3"><i data-icon="star"></i></button>
+              <button type="button" class="star-btn" data-value="4"><i data-icon="star"></i></button>
+              <button type="button" class="star-btn" data-value="5"><i data-icon="star"></i></button>
+            </div>
+            <span class="rating-widget-count" id="nv-rating-count">—</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="synopsis" id="nv-synopsis">—</p>
+    </div>
+  </section>
+
+  <section class="section" id="chapters">
+    <div class="container">
+      <div class="chapters-toolbar">
+        <div class="section-title"><span class="ico"><i data-icon="book"></i></span>قائمة الفصول</div>
+        <div class="search-field">
+          <input type="text" id="nv-search" placeholder="ابحث برقم الفصل...">
+          <i data-icon="search"></i>
+        </div>
+      </div>
+      <div class="chapter-full-list" id="nv-chapters"></div>
+    </div>
+  </section>
+
+  <section class="section section-tight" id="comments">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-title">
+          <span class="ico"><i data-icon="comment"></i></span>
+          التعليقات <span id="nv-comments-count" style="color:var(--paper-mute);font-weight:600"></span>
+        </div>
+      </div>
+
+      <div class="comment-composer-guard" id="comment-composer-guard">
+        <p style="color:var(--paper-mute)"><a href="login.html">سجّل الدخول</a> لإضافة تعليق.</p>
+      </div>
+
+      <form class="comment-composer" id="comment-form" style="display:none">
+        <div class="comment-avatar" id="comment-composer-avatar">؟</div>
+        <div class="comment-composer-body">
+          <textarea id="comment-input" placeholder="شاركنا رأيك في هذه الرواية..." required></textarea>
+          <button type="submit" class="btn btn-primary btn-sm"><i data-icon="quill"></i> إرسال</button>
+        </div>
+      </form>
+
+      <div class="comment-list" id="comment-list"></div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-title"><span class="ico"><i data-icon="flame"></i></span>قد يعجبك أيضًا</div>
+      </div>
+      <div class="similar-strip trending-grid" id="nv-similar"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html"><span class="logo-mark"><i data-icon="quill"></i></span>ميداد</a>
+      <p>منصّة عربية للروايات الأصلية والمترجمة، نصنعها لتكون بيتًا للكتّاب المستقلين وقرّائهم.</p>
+      <div class="footer-social">
+        <a href="#" class="icon-btn" aria-label="ديسكورد"><i data-icon="discord"></i></a>
+        <a href="#" class="icon-btn" aria-label="مشاركة"><i data-icon="share"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>المنصّة</h4>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="novels.html">قائمة الروايات</a></li>
+        <li><a href="publish.html">انشر روايتك</a></li>
+        <li><a href="index.html#trending">الأكثر رواجًا</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>الدعم</h4>
+      <ul>
+        <li><a href="/pages/contact.html">تواصل معنا</a></li>
+        <li><a href="/pages/faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="#" data-report-issue>الإبلاغ عن مشكلة</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>قانوني</h4>
+      <ul>
+        <li><a href="/pages/terms.html">الشروط والأحكام</a></li>
+        <li><a href="/pages/privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="/pages/copyright.html">حقوق النشر</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> ميداد. جميع الحقوق محفوظة.</span>
+    <span>صُنع بحب للقصص العربية</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <span class="toast-ico"><i data-icon="check"></i></span>
+  <div><strong>تم</strong><span>—</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

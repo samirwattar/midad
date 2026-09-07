@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إدارة الفصول — ميداد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">
+      <span class="logo-mark"><i data-icon="quill"></i></span>
+      ميداد<small>MIDAD · روايات</small>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+      <a href="novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+      <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="publish.html" class="btn btn-primary" id="nav-publish-btn">انشر روايتك</a>
+      <button class="icon-btn" aria-label="بحث"><i data-icon="search"></i></button>
+      <button class="icon-btn" aria-label="الإشعارات"><i data-icon="bell"></i></button>
+      <button class="icon-btn" data-theme-toggle aria-label="تبديل المظهر"><i data-icon="moon"></i></button>
+      <span id="nav-auth-area"></span>
+      <button class="icon-btn menu-toggle" data-menu-open aria-label="فتح القائمة"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <div class="mobile-drawer-head">
+      <span class="logo" style="font-size:1.3rem">ميداد</span>
+      <button class="icon-btn" data-menu-close aria-label="إغلاق القائمة"><i data-icon="close"></i></button>
+    </div>
+    <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+    <a href="novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+    <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    <div class="mobile-drawer-divider"></div>
+    <a href="publish.html" id="nav-publish-btn-mobile"><i data-icon="quill"></i>انشر روايتك</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i data-icon="chevronLeft"></i>
+        <a href="profile.html">الملف الشخصي</a>
+        <i data-icon="chevronLeft"></i>
+        <span>إدارة الفصول</span>
+      </div>
+      <h1 class="serif" style="font-size:2.2rem;margin-bottom:8px" id="chapters-novel-title">جارٍ التحميل...</h1>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div id="chapters-guard" style="display:none;text-align:center;padding:60px 0">
+        <p style="color:var(--paper-mute);margin-bottom:16px">—</p>
+        <a href="profile.html" class="btn btn-primary">العودة للملف الشخصي</a>
+      </div>
+
+      <div id="chapters-page-body">
+        <div class="form-card" style="margin-bottom:32px">
+          <h3 style="margin-bottom:16px"><i data-icon="quill"></i> إضافة فصل جديد</h3>
+          <form id="add-chapter-form">
+            <div class="form-row">
+              <label for="c-title">عنوان الفصل (اختياري)</label>
+              <input type="text" id="c-title" placeholder="مثال: البداية">
+            </div>
+            <div class="form-row">
+              <label for="c-content">نص الفصل</label>
+              <textarea id="c-content" style="min-height:220px" required></textarea>
+            </div>
+            <div class="form-row agree-row">
+              <input type="checkbox" id="c-premium">
+              <label for="c-premium">فصل مدفوع</label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i data-icon="check"></i> نشر الفصل
+            </button>
+          </form>
+        </div>
+
+        <div class="section-head">
+          <div class="section-title"><span class="ico"><i data-icon="book"></i></span>الفصول الحالية</div>
+        </div>
+        <div class="chapter-full-list" id="chapters-list">
+          <p style="padding:18px;color:var(--paper-mute)">جارٍ التحميل...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast">
+  <span class="toast-ico"><i data-icon="check"></i></span>
+  <div><strong>تم</strong><span>—</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

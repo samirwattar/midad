@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الأسئلة الشائعة — ميداد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark"><i data-icon="quill"></i></span>
+      ميداد<small>MIDAD · روايات</small>
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html"><i data-icon="home"></i>الرئيسية</a>
+      <a href="../novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+      <a href="../index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+      <div class="nav-drop">
+        <button type="button"><i data-icon="users"></i>مجتمعنا <i data-icon="chevronDown"></i></button>
+        <div class="nav-drop-panel">
+          <a href="#">سيرفر ديسكورد</a>
+          <a href="faq.html">الأسئلة الشائعة</a>
+          <a href="contact.html">تواصل معنا</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="../publish.html" class="btn btn-primary" id="nav-publish-btn">انشر روايتك</a>
+      <button class="icon-btn" aria-label="بحث"><i data-icon="search"></i></button>
+      <button class="icon-btn" aria-label="الإشعارات"><i data-icon="bell"></i></button>
+      <button class="icon-btn" data-theme-toggle aria-label="تبديل المظهر"><i data-icon="moon"></i></button>
+      <span id="nav-auth-area"></span>
+      <button class="icon-btn menu-toggle" data-menu-open aria-label="فتح القائمة"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <div class="mobile-drawer-head">
+      <span class="logo" style="font-size:1.3rem">ميداد</span>
+      <button class="icon-btn" data-menu-close aria-label="إغلاق القائمة"><i data-icon="close"></i></button>
+    </div>
+    <a href="../index.html"><i data-icon="home"></i>الرئيسية</a>
+    <a href="../novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+    <a href="../index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    <a href="faq.html" class="active"><i data-icon="users"></i>الأسئلة الشائعة</a>
+    <div class="mobile-drawer-divider"></div>
+    <a href="../publish.html" id="nav-publish-btn-mobile"><i data-icon="quill"></i>انشر روايتك</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">الرئيسية</a>
+        <i data-icon="chevronLeft"></i>
+        <span>الأسئلة الشائعة</span>
+      </div>
+      <h1 class="serif" style="font-size:2.2rem;margin-bottom:8px">الأسئلة الشائعة</h1>
+      <p style="color:var(--paper-mute)">إجابات سريعة عن أكثر الأسئلة تكرارًا. لم تجد ما تبحث عنه؟ <a href="contact.html" style="color:var(--indigo-hover);text-decoration:underline">تواصل معنا</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container faq-wrap">
+
+      <div class="faq-group">
+        <h2>عام</h2>
+
+        <details class="faq-item">
+          <summary>ما هو ميداد؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">ميداد منصّة عربية لقراءة ونشر الروايات الأصلية والمترجمة، نصنعها لتكون بيتًا للكتّاب المستقلين وقرّائهم.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>هل استخدام المنصّة مجاني؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">القراءة والتصفح واستخدام أغلب الميزات مجاني بالكامل. بعض الفصول قد يضعها الكاتب كمحتوى مدفوع، وستظهر عليها علامة قفل واضحة قبل فتحها.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>هل ميداد متاحة كتطبيق جوال؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">حاليًا ميداد متاحة عبر المتصفح فقط، وهي مصمّمة لتعمل بشكل مريح على الجوال والحاسوب على حدٍّ سواء دون الحاجة لتثبيت أي تطبيق.</div>
+        </details>
+      </div>
+
+      <div class="faq-group">
+        <h2>القراءة والمكتبة</h2>
+
+        <details class="faq-item">
+          <summary>كيف أضيف رواية إلى مكتبتي؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">من صفحة الرواية، اضغط زر "أضف للمكتبة". ستجد كل رواياتك المحفوظة لاحقًا في صفحة "ملفي الشخصي" ضمن قسم "مكتبتي".</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>كيف أتابع كاتبًا؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">اضغط زر "تابع الكاتب" في صفحة أي رواية له. المتابعة مجانية ويمكنك إلغاءها في أي وقت من نفس الزر.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>كيف أقيّم رواية؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">توجد نجوم تقييم أسفل معلومات الرواية مباشرة. اضغط على عدد النجوم الذي يعبّر عن رأيك وسيُحفظ تقييمك فورًا، ويمكنك تغييره لاحقًا بالضغط على نجوم مختلفة.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>لماذا لا أستطيع فتح بعض الفصول؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">بعض الفصول يضعها الكاتب كمحتوى مدفوع وتظهر بعلامة قفل صغيرة بجانبها. باقي الفصول متاحة للقراءة مجانًا دون الحاجة لتسجيل الدخول.</div>
+        </details>
+      </div>
+
+      <div class="faq-group">
+        <h2>النشر والكتّاب</h2>
+
+        <details class="faq-item">
+          <summary>كيف أنشر روايتي؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">يجب أن يكون حسابك بصلاحية "كاتب". من صفحة "انشر روايتك" عبّئ بيانات الرواية والفصل الأول وأرسلها، وستظهر في قائمة الروايات بعد موافقة فريق المراجعة.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>كيف أحصل على صلاحية كاتب؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">سجّل حسابًا عاديًا أولًا، ثم راسلنا من صفحة "تواصل معنا" لطلب ترقية حسابك إلى كاتب.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>كم يستغرق قبول الرواية بعد النشر؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">عادةً خلال 24 ساعة. إن تم رفضها ستصلك ملاحظة توضّح السبب في صفحة "ملفي الشخصي"، ويمكنك التعديل وإعادة الإرسال.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>هل يمكنني تعديل رواية بعد نشرها؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">نعم، من صفحة "ملفي الشخصي" اختر "تعديل" على الرواية. تعديل البيانات الأساسية يعيدها لقائمة المراجعة، أمّا إضافة فصول جديدة فلا يوقف ظهورها.</div>
+        </details>
+      </div>
+
+      <div class="faq-group">
+        <h2>الحساب والخصوصية</h2>
+
+        <details class="faq-item">
+          <summary>هل يمكنني تغيير اسم المستخدم أو الصورة الشخصية؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">نعم، من صفحة "ملفي الشخصي" يمكنك تحديث اسم المستخدم والصورة الشخصية في أي وقت.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>كيف أبلغ عن مشكلة أو محتوى مخالف؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">
+            استخدم زر "الإبلاغ عن مشكلة" الموجود أسفل كل صفحة، أو اضغط الزر أدناه مباشرة.
+            <div class="faq-cta">
+              <button type="button" class="btn btn-ghost btn-sm" data-report-issue><i data-icon="flag"></i> الإبلاغ عن مشكلة الآن</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>كيف أحذف حسابي؟<i data-icon="chevronDown" class="chev"></i></summary>
+          <div class="faq-answer">راسلنا من <a href="contact.html" style="color:var(--indigo-hover);text-decoration:underline">صفحة تواصل معنا</a> وسنقوم بحذف حسابك وبياناتك خلال مدة قصيرة. راجع <a href="privacy.html" style="color:var(--indigo-hover);text-decoration:underline">سياسة الخصوصية</a> لمزيد من التفاصيل.</div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i data-icon="quill"></i></span>ميداد</a>
+      <p>منصّة عربية للروايات الأصلية والمترجمة، نصنعها لتكون بيتًا للكتّاب المستقلين وقرّائهم.</p>
+      <div class="footer-social">
+        <a href="#" class="icon-btn" aria-label="ديسكورد"><i data-icon="discord"></i></a>
+        <a href="#" class="icon-btn" aria-label="مشاركة"><i data-icon="share"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>المنصّة</h4>
+      <ul>
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../novels.html">قائمة الروايات</a></li>
+        <li><a href="../publish.html">انشر روايتك</a></li>
+        <li><a href="../index.html#trending">الأكثر رواجًا</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>الدعم</h4>
+      <ul>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="#" data-report-issue>الإبلاغ عن مشكلة</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>قانوني</h4>
+      <ul>
+        <li><a href="terms.html">الشروط والأحكام</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="copyright.html">حقوق النشر</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> ميداد. جميع الحقوق محفوظة.</span>
+    <span>صُنع بحب للقصص العربية</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <span class="toast-ico"><i data-icon="check"></i></span>
+  <div><strong>تم</strong><span>—</span></div>
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>

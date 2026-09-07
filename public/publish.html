@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>انشر روايتك — ميداد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">
+      <span class="logo-mark"><i data-icon="quill"></i></span>
+      ميداد<small>MIDAD · روايات</small>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+      <a href="novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+      <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+      <div class="nav-drop">
+        <button type="button"><i data-icon="users"></i>مجتمعنا <i data-icon="chevronDown"></i></button>
+        <div class="nav-drop-panel">
+          <a href="#">سيرفر ديسكورد</a>
+          <a href="/pages/faq.html">الأسئلة الشائعة</a>
+          <a href="/pages/contact.html">تواصل معنا</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="publish.html" class="btn btn-primary" id="nav-publish-btn">انشر روايتك</a>
+      <button class="icon-btn" aria-label="بحث"><i data-icon="search"></i></button>
+      <button class="icon-btn" aria-label="الإشعارات"><i data-icon="bell"></i></button>
+      <button class="icon-btn" data-theme-toggle aria-label="تبديل المظهر"><i data-icon="moon"></i></button>
+      <span id="nav-auth-area"></span>
+      <button class="icon-btn menu-toggle" data-menu-open aria-label="فتح القائمة"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <div class="mobile-drawer-head">
+      <span class="logo" style="font-size:1.3rem">ميداد</span>
+      <button class="icon-btn" data-menu-close aria-label="إغلاق القائمة"><i data-icon="close"></i></button>
+    </div>
+    <a href="index.html"><i data-icon="home"></i>الرئيسية</a>
+    <a href="novels.html"><i data-icon="book"></i>قائمة الروايات</a>
+    <a href="index.html#trending"><i data-icon="flame"></i>الأكثر رواجًا</a>
+    <a href="#"><i data-icon="users"></i>مجتمعنا</a>
+    <div class="mobile-drawer-divider"></div>
+    <a href="publish.html" class="active" id="nav-publish-btn-mobile"><i data-icon="quill"></i>انشر روايتك</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i data-icon="chevronLeft"></i>
+        <span>انشر روايتك</span>
+      </div>
+      <h1 class="serif" style="font-size:2.4rem;margin-bottom:8px">شارك عالمك مع القرّاء</h1>
+      <p style="color:var(--paper-mute);max-width:60ch;margin-bottom:8px">
+        عبّئ البيانات التالية لإرسال روايتك لفريق المراجعة. بعد الموافقة، ستظهر روايتك في قائمة الروايات وتصلك تحديثات القرّاء والمتابعين مباشرة.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div id="publish-guard" style="display:none;text-align:center;padding:60px 0">
+        <p style="color:var(--paper-mute);margin-bottom:16px">يجب تسجيل الدخول بحساب كاتب لنشر رواية.</p>
+        <a href="login.html" class="btn btn-primary">تسجيل الدخول</a>
+      </div>
+      <form class="publish-layout" id="publish-form" style="display:none">
+        <div class="form-card">
+          <div class="form-row">
+            <label for="f-title">عنوان الرواية</label>
+            <input type="text" id="f-title" placeholder="مثال: عرش الرماد" required>
+          </div>
+
+          <div class="form-row">
+            <label for="f-title-en">العنوان بالإنجليزية (اختياري)</label>
+            <input type="text" id="f-title-en" placeholder="Throne of Ashes">
+          </div>
+
+          <div class="form-row">
+            <label>التصنيفات <span style="color:var(--paper-mute);font-weight:500">(اختر حتى 3)</span></label>
+            <div class="chip-select">
+              <button type="button">خيال</button>
+              <button type="button">رومانسي</button>
+              <button type="button">أكشن</button>
+              <button type="button">دراما</button>
+              <button type="button">كوميدي</button>
+              <button type="button">إثارة</button>
+              <button type="button">خيال علمي</button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>حالة العمل</label>
+            <div class="status-choice">
+              <label><input type="radio" name="status" value="ongoing" checked> مستمر</label>
+              <label><input type="radio" name="status" value="completed"> مكتمل</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>نوع العمل</label>
+            <div class="status-choice">
+              <label><input type="radio" name="type" value="translated" checked> مترجمة</label>
+              <label><input type="radio" name="type" value="original"> مؤلفة</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="f-synopsis">نبذة عن الرواية</label>
+            <textarea id="f-synopsis" placeholder="اكتب ملخصًا قصيرًا يجذب القرّاء دون حرق الأحداث..." required></textarea>
+            <div class="form-hint">بين 100 و600 حرف يعطي أفضل نتيجة على صفحة الرواية.</div>
+          </div>
+
+          <div class="form-row">
+            <label>غلاف الرواية</label>
+            <div class="dropzone" id="cover-dropzone">
+              <i data-icon="upload"></i>
+              <b>اسحب صورة الغلاف هنا أو اضغط للاختيار</b>
+              <span>PNG أو JPG — بحجم لا يتجاوز 5 ميغابايت</span>
+              <input type="file" accept="image/*">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="f-chapter">الفصل الأول</label>
+            <textarea id="f-chapter" style="min-height:180px" placeholder="الصق أو اكتب نص الفصل الأول هنا..." required></textarea>
+          </div>
+
+          <div class="form-row agree-row">
+            <input type="checkbox" id="f-agree" required>
+            <label for="f-agree">أقرّ بأن هذا العمل من تأليفي أو أملك حقوق نشره، وأوافق على <a href="#">شروط النشر</a> الخاصة بمنصّة ميداد.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <i data-icon="quill"></i> إرسال للمراجعة
+          </button>
+        </div>
+
+        <aside class="tips-card">
+          <h3><i data-icon="bulb"></i> نصائح قبل النشر</h3>
+          <ul class="tips-list">
+            <li><span class="num">1</span> اختر عنوانًا واضحًا وقصيرًا — العناوين الغامضة تُضعف نسبة النقر.</li>
+            <li><span class="num">2</span> اجعل الفصل الأول قويًا؛ معظم القرّاء يقرّرون المتابعة من عدمها خلاله.</li>
+            <li><span class="num">3</span> غلاف مقروء وبسيط أفضل من غلاف مزدحم بالتفاصيل.</li>
+            <li><span class="num">4</span> انشر بانتظام — القرّاء يتابعون الروايات ذات الجدول الثابت.</li>
+            <li><span class="num">5</span> راجع الإملاء قبل الإرسال؛ فريقنا يراجع خلال 24 ساعة.</li>
+          </ul>
+        </aside>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html"><span class="logo-mark"><i data-icon="quill"></i></span>ميداد</a>
+      <p>منصّة عربية للروايات الأصلية والمترجمة، نصنعها لتكون بيتًا للكتّاب المستقلين وقرّائهم.</p>
+      <div class="footer-social">
+        <a href="#" class="icon-btn" aria-label="ديسكورد"><i data-icon="discord"></i></a>
+        <a href="#" class="icon-btn" aria-label="مشاركة"><i data-icon="share"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>المنصّة</h4>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="novels.html">قائمة الروايات</a></li>
+        <li><a href="publish.html">انشر روايتك</a></li>
+        <li><a href="index.html#trending">الأكثر رواجًا</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>الدعم</h4>
+      <ul>
+        <li><a href="/pages/contact.html">تواصل معنا</a></li>
+        <li><a href="/pages/faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="#" data-report-issue>الإبلاغ عن مشكلة</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>قانوني</h4>
+      <ul>
+        <li><a href="/pages/terms.html">الشروط والأحكام</a></li>
+        <li><a href="/pages/privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="/pages/copyright.html">حقوق النشر</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> ميداد. جميع الحقوق محفوظة.</span>
+    <span>صُنع بحب للقصص العربية</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <span class="toast-ico"><i data-icon="check"></i></span>
+  <div><strong>تم</strong><span>—</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
